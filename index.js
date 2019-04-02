@@ -5,6 +5,7 @@ const request = require('request');
 const jsonDiff = require('json-diff');
 
 let {PythonShell} = require('python-shell');
+const { exec } = require('child_process');
 
 const Octokit = require('@octokit/rest')
 const octokit = new Octokit({
@@ -146,9 +147,15 @@ let main = async () => {
           await octokit.repos.uploadReleaseAsset({headers: {"content-length": fs.statSync(file).size, "content-type": "application/zip"}, url: result.data.upload_url, name: tagname, label: file, file: file});
 
           fs.unlinkSync(file);
-
-          // Submit changes to git.
         }
+        exec(sprintf("git add stable.json weekly.json && git -c \"user.name=TryHardDood\" -c \"user.email=rsnconfigs@gmail.com\" && commit -m \"sync: %s\" && git push -q https://%s@github.com/TryHardDood/mi-vendor-updater.git HEAD:master", new Date(), process.env.GITHUB_TOKEN), (err, stdout, stderr) => {
+            if (err) {
+              return;
+            }
+
+            console.log(`stdout: ${stdout}`);
+            console.log(`stderr: ${stderr}`);
+        });
       }
     }
   }
