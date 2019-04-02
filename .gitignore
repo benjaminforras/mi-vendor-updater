@@ -60,5 +60,5 @@ typings/
 # next.js build output
 .next
 
-package_lock.json
+package-lock.json
 *_old.json
