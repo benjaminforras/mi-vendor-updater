@@ -25,7 +25,7 @@ const stable_devices = ['beryllium_global', 'cappu', 'capricorn', 'capricorn_glo
     'prada', 'riva', 'riva_global', 'rolex', 'rolex_global', 'rosy', 'rosy_global', 'sagit',
     'sagit_global', 'sakura', 'sakura_india_global', 'santoni', 'santoni_global', 'scorpio',
     'scorpio_global', 'sirius', 'tiffany', 'tulip_global', 'ursa', 'ugg', 'ugg_global', 'ugglite',
-    'ugglite_global', 'violet', 'violet_in_global', 'vince', 'vince_global', 'wayne', 'whyred', 'whyred_global', 'ysl', 'ysl_global']
+    'ugglite_global', 'violet', 'violet_in_global', 'vince', 'vince_global', 'wayne', 'whyred', 'whyred_global', 'ysl', 'ysl_global'];
 
 const weekly_devices = ['beryllium_global', 'cappu', 'capricorn', 'capricorn_global', 'cepheus', 'cepheus_global', 'chiron', 'chiron_global', 'clover',
     'dipper', 'dipper_global', 'equuleus', 'equuleus_global', 'helium', 'helium_global', 'hydrogen',
@@ -35,7 +35,7 @@ const weekly_devices = ['beryllium_global', 'cappu', 'capricorn', 'capricorn_glo
     'prada', 'riva', 'riva_global', 'rolex', 'rolex_global', 'rosy', 'rosy_global', 'sagit',
     'sagit_global', 'sakura', 'sakura_india_global', 'santoni', 'santoni_global', 'scorpio',
     'scorpio_global', 'sirius', 'tiffany', 'tulip_global', 'ursa', 'ugg', 'ugg_global', 'ugglite',
-    'ugglite_global', 'vince', 'vince_global', 'wayne', 'whyred', 'whyred_global', 'ysl', 'ysl_global']
+    'ugglite_global', 'vince', 'vince_global', 'wayne', 'whyred', 'whyred_global', 'ysl', 'ysl_global'];
 
 // const arb_devices = ['nitrogen', 'nitrogen_global', 'sakura', 'sakura_india_global', 'wayne', 'whyred', 'whyred_global']
 
@@ -48,14 +48,14 @@ let stable = [], weekly = [];
 let devices_all, devices, branch;
 
 let main = async () => {
-    await new Promise(resolve => request(UPDATER_LINK_STABLE, ((error, body) => {
+    await new Promise(resolve => request(UPDATER_LINK_STABLE, ((error, response, body) => {
         if (error) console.log(error);
 
         stable_all = JSON.parse(body);
         resolve();
     })));
 
-    await new Promise(resolve => request(UPDATER_LINK_WEEKLY, ((error, body) => {
+    await new Promise(resolve => request(UPDATER_LINK_WEEKLY, ((error, response, body) => {
         if (error) console.log(error);
 
         weekly_all = JSON.parse(body);
@@ -156,3 +156,4 @@ let main = async () => {
 }
 
 main();
+
