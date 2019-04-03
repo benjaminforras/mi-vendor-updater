@@ -141,7 +141,7 @@ let main = async () => {
 
                     fs.unlinkSync(file);
                 }
-                exec("git add stable.json weekly.json && git -c \"user.name=TryHardDood\" -c \"user.email=rsnconfigs@gmail.com\" && commit -m \"sync: {0}\" && git push -q https://{1}@github.com/TryHardDood/mi-vendor-updater.git HEAD:master".replace("{0}", new Date().toISOString()).replace("{1}", process.env.GITHUB_TOKEN), (err, stdout, stderr) => {
+                exec("git add stable.json weekly.json && git -c \"user.name=TryHardDood\" -c \"user.email=rsnconfigs@gmail.com\" commit -m \"sync: {0}\" && git push -q https://{1}@github.com/TryHardDood/mi-vendor-updater.git HEAD:master".replace("{0}", new Date().toISOString()).replace("{1}", process.env.GITHUB_TOKEN), (err, stdout, stderr) => {
                     if (err) {
                         return;
                     }
