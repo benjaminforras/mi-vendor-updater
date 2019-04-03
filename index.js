@@ -43,7 +43,7 @@ const weekly_devices = ['beryllium_global', 'cappu', 'capricorn', 'capricorn_glo
     'scorpio_global', 'sirius', 'tiffany', 'tulip_global', 'ursa', 'ugg', 'ugg_global', 'ugglite',
     'ugglite_global', 'vince', 'vince_global', 'wayne', 'whyred', 'whyred_global', 'ysl', 'ysl_global']
 
-const arb_devices = ['nitrogen', 'nitrogen_global', 'sakura', 'sakura_india_global', 'wayne', 'whyred', 'whyred_global']
+// const arb_devices = ['nitrogen', 'nitrogen_global', 'sakura', 'sakura_india_global', 'wayne', 'whyred', 'whyred_global']
 
 const versions = ['stable', 'weekly'];
 
@@ -54,14 +54,14 @@ let stable = [], weekly = [];
 let devices_all, devices, branch;
 
 let main = async () => {
-    await new Promise(resolve => request(UPDATER_LINK_STABLE, ((error, response, body) => {
+    await new Promise(resolve => request(UPDATER_LINK_STABLE, ((error, body) => {
         if (error) console.log(error);
 
         stable_all = JSON.parse(body);
         resolve();
     })));
 
-    await new Promise(resolve => request(UPDATER_LINK_WEEKLY, ((error, response, body) => {
+    await new Promise(resolve => request(UPDATER_LINK_WEEKLY, ((error, body) => {
         if (error) console.log(error);
 
         weekly_all = JSON.parse(body);
@@ -102,7 +102,6 @@ let main = async () => {
                 console.log("No changes found for " + v);
             }
             else {
-                let changes = [];
                 let links = [];
                 for (let change of Object.keys(diff)) {
                     if (diff[change][0].indexOf('+') > -1) {
@@ -122,7 +121,7 @@ let main = async () => {
                     await new Promise(resolve => request(link.download).pipe(fs.createWriteStream(link.filename)).on('finish', resolve));
                     console.log(link.filename + ' downloaded');
 
-                    let data = await new Promise((resolve) => {
+                    await new Promise((resolve) => {
                         var options = {
                             scriptPath: 'xiaomi-flashable-firmware-creator.py',
                             args: ['-V', link.filename]
