@@ -1,0 +1,3 @@
+[submodule "xiaomi-flashable-firmware-creator.py"]
+	path = xiaomi-flashable-firmware-creator.py
+	url = https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py.git
