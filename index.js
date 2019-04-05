@@ -86,7 +86,7 @@ let main = async () => {
                 branch.push(obj);
             }
         }
-        fs.writeFileSync(v + '.json', JSON.stringify(branch));
+        fs.writeFileSync(v + '.json', JSON.stringify(branch, null, 4));
 
         if (fs.existsSync(v + '_old.json') && fs.existsSync(v + '.json')) {
             let o = fs.readFileSync(v + '_old.json');
@@ -156,17 +156,17 @@ let main = async () => {
 
                     fs.unlinkSync(file);
                 }
-                exec("git add stable.json weekly.json && git -c \"user.name=TryHardDood\" -c \"user.email=rsnconfigs@gmail.com\" commit -m \"sync: {0}\" && git push -q https://{1}@github.com/TryHardDood/mi-vendor-updater.git HEAD:master".replace("{0}", new Date().toISOString()).replace("{1}", process.env.GITHUB_TOKEN), (err, stdout, stderr) => {
-                    if (err) {
-                        return;
-                    }
-
-                    console.log(`stdout: ${stdout}`);
-                    console.log(`stderr: ${stderr}`);
-                });
             }
         }
     }
+    exec("git add stable.json weekly.json && git -c \"user.name=TryHardDood\" -c \"user.email=rsnconfigs@gmail.com\" commit -m \"sync: {0}\" && git push -q https://{1}@github.com/TryHardDood/mi-vendor-updater.git HEAD:master".replace("{0}", new Date().toISOString()).replace("{1}", process.env.GITHUB_TOKEN), (err, stdout, stderr) => {
+        if (err) {
+            return;
+        }
+
+        console.log(`stdout: ${stdout}`);
+        console.log(`stderr: ${stderr}`);
+    });
     console.log("Done");
 }
 
