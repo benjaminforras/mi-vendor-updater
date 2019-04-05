@@ -1,15 +1,15 @@
 [
     {
-        "beryllium_global": "POCOF1Global_9.3.28"
+        "beryllium_global": "POCOF1Global_9.3.22"
     },
     {
-        "cappu": "MIPAD3_9.3.28"
+        "cappu": "MIPAD3_9.3.22"
     },
     {
-        "capricorn": "MI5S_9.3.28"
+        "capricorn": "MI5S_9.3.22"
     },
     {
-        "capricorn_global": "MI5SGlobal_9.3.28"
+        "capricorn_global": "MI5SGlobal_9.3.22"
     },
     {
         "cepheus": "CEPHEUS_9.4.1"
