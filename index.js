@@ -144,7 +144,11 @@ let main = async () => {
                             console.log('Couldn\'t create release');
                         }
                     }
-                    await octokit.repos.uploadReleaseAsset({ headers: { "content-length": fs.statSync(file).size, "content-type": "application/zip" }, url: result.data.upload_url, name: tagname, label: file, file: file });
+                    try {
+                        await octokit.repos.uploadReleaseAsset({ headers: { "content-length": fs.statSync(file).size, "content-type": "application/zip" }, url: result.data.upload_url, name: tagname, label: file, file: file });
+                    } catch(e) {
+                        console.error(e);
+                    }
 
                     fs.unlinkSync(file);
                 }
