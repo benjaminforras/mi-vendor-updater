@@ -147,10 +147,7 @@ let main = async () => {
                     }
 
                     try {
-                        let stats = fs.statSync(file);
-                        let fileSizeInBytes = stats["size"];
-
-                        await octokit.repos.uploadReleaseAsset({ headers: { "content-length": fileSizeInBytes, "content-type": "application/zip" }, url: result.data.upload_url, name: file, label: file, file: file });
+                        await octokit.repos.uploadReleaseAsset({ headers: { "content-length": fs.statSync(file).size, "content-type": "application/octet-stream" }, url: result.data.upload_url, name: file, label: file, file: file });
                         console.log(file + ' uploaded');
                     } catch (e) {
                         console.log('Couldn\'t upload asset');
