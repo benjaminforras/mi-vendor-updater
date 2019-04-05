@@ -147,8 +147,7 @@ let main = async () => {
                     }
 
                     try {
-                        const size = fs.readFileSync(file);
-                        await octokit.repos.uploadReleaseAsset({ headers: { "content-length": size.length, "content-type": "application/octet-stream" }, url: result.data.upload_url, name: file, label: file, file: file });
+                        await octokit.repos.uploadReleaseAsset({ headers: { "content-length": fs.statSync(file).size, "content-type": "application/octet-stream" }, url: result.data.upload_url, name: file, label: file, file: fs.createReadStream(file) });
                         console.log(file + ' uploaded');
                     } catch (e) {
                         console.log('Couldn\'t upload asset');
