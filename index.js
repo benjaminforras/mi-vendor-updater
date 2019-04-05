@@ -13,6 +13,11 @@ const octokit = new Octokit({
     baseUrl: 'https://api.github.com'
 });
 
+// Telegram bot
+const Telegraf = require('telegraf');
+const bot = new Telegraf(process.env.BOT_TOKEN);
+const TELEGRAM_CHANNEL = '@MIUIVendorUpdater';
+
 const UPDATER_LINK_STABLE = "https://raw.githubusercontent.com/XiaomiFirmwareUpdater/miui-updates-tracker/master/stable_recovery/stable_recovery.json";
 const UPDATER_LINK_WEEKLY = "https://raw.githubusercontent.com/XiaomiFirmwareUpdater/miui-updates-tracker/master/weekly_recovery/weekly_recovery.json";
 
@@ -102,7 +107,7 @@ let main = async () => {
                         for (let codename of Object.keys(diff[change][1])) {
                             for (let info of devices_all) {
                                 if (info.filename.split('_')[1] + '_' + info.filename.split('_')[2] == diff[change][1][codename]) {
-                                    let obj = { codename: codename, filename: info.filename, download: info.download };
+                                    let obj = { codename: codename, filename: info.filename, download: info.download, device: info.device, android: info.android, version: info.version };
                                     links.push(obj);
                                     console.log("New version for " + codename + " is available (" + info.filename + ")");
                                 }
@@ -149,6 +154,18 @@ let main = async () => {
                     try {
                         await octokit.repos.uploadReleaseAsset({ headers: { "content-length": fs.statSync(file).size, "content-type": "application/octet-stream" }, url: result.data.upload_url, name: file, label: file, file: fs.createReadStream(file) });
                         console.log(file + ' uploaded');
+
+                        console.log("Sending telegram message.");
+                        let telegram_message = "New firmware+vendor update available!: \n*Device:* " + link.device + " \n*Codename:* `" + link.codename + "` \n" +
+                            "*Version:* `" + link.version + "` \n*Android:* " + link.android + " \nFilename: `" + file + "` \nFilesize: " + fs.statSync(file).size + " \n" +
+                            "*Download:* [Here](https://github.com/TryHardDood/mi-vendor-updater/releases/" + link.codename + "_" + v + ")\n@XiaomiFirmwareUpdater | @MIUIVendorUpdater";
+                        try {
+                            await bot.sendMessage(TELEGRAM_CHANNEL, telegram_message);
+                        } catch(e3) {
+                            console.log('Error sending telegram message:');
+                            console.log(telegram_message);
+                            console.error(e3);
+                        }
                     } catch (e) {
                         console.log('Couldn\'t upload asset');
                         console.error(e);
