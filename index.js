@@ -160,7 +160,7 @@ let main = async () => {
                             "*Version:* `" + link.version + "` \n*Android:* " + link.android + " \nFilename: `" + file + "` \nFilesize: " + fs.statSync(file).size + " \n" +
                             "*Download:* [Here](https://github.com/TryHardDood/mi-vendor-updater/releases/" + link.codename + "_" + v + ")\n@XiaomiFirmwareUpdater | @MIUIVendorUpdater";
                         try {
-                            await bot.sendMessage(TELEGRAM_CHANNEL, telegram_message);
+                            await bot.telegram.sendMessage(TELEGRAM_CHANNEL, telegram_message);
                         } catch(e3) {
                             console.log('Error sending telegram message:');
                             console.log(telegram_message);
