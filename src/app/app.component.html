@@ -1,21 +1,61 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="ui middle aligned center aligned grid" style="height: 100%;">
+    <div class="column">
+        <h2 class="ui inverted image header">
+            <i class="circular users image icon"></i>
+            <div class="content">
+                MIUI Vendor Updater
+            </div>
+        </h2>
+        <form class="ui large form">
+            <div class="ui stacked segment">
+                <div class="field">
+                    <div class="ui left icon input" [class.loading]="loading">
+                        <input type="text" placeholder="Search..." #searchText (keyup)="onKeyUp(searchText.value)"/>
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+                <div class="ui fluid large teal submit button">Search</div>
+            </div>
+
+            <div class="ui stacked segment" *ngIf="filteredDevices && filteredDevices.length > 0">
+                <h3 class="ui header">
+                    Search results:
+                </h3>
+                <table class="ui celled striped table">
+                    <tbody class="ui styled accordion">
+
+                    <ng-template ngFor let-device [ngForOf]="filteredDevices">
+                        <tr class="title">
+                            <td class="collapsing">
+                                <i class="folder icon"></i> {{device.name}}
+                            </td>
+                            <td><a [href]="device.html_url" target="_blank">Github</a></td>
+                            <td class="right aligned collapsing">{{device.published_at | date}}</td>
+                        </tr>
+                        <tr class="content">
+                            <td colspan="3">
+                                <div class="ui middle aligned selection list">
+                                    <div class="item" *ngFor="let asset of device.assets">
+                                        <i class="ui avatar image file archive icon"></i>
+                                        <div class="content">
+                                            <div class="header"><a [href]="asset.browser_download_url"
+                                                                   target="_blank">{{asset.name}}</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-template>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+
+        <div class="ui message">
+            New to us? <a href="https://t.me/@MIUIVendorUpdater">Follow on Telegram!</a>
+        </div>
+    </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
 <router-outlet></router-outlet>

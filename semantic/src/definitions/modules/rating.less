@@ -1,0 +1,163 @@
+/*!
+ * # Semantic UI - Rating
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Theme
+*******************************/
+
+@type    : 'module';
+@element : 'rating';
+
+@import (multiple) '../../theme.config';
+
+/*******************************
+           Rating
+*******************************/
+
+.ui.rating {
+  display: inline-flex;
+  white-space: @whiteSpace;
+  vertical-align: @verticalAlign;
+}
+.ui.rating:last-child {
+  margin-right: 0;
+}
+
+/* Icon */
+.ui.rating .icon {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-weight: @normal;
+  font-style: normal;
+  flex: 1 0 auto;
+  cursor: @iconCursor;
+  width: @iconWidth;
+  height: @iconHeight;
+  transition: @iconTransition;
+}
+
+
+/*******************************
+             Types
+*******************************/
+
+
+/*-------------------
+      Standard
+--------------------*/
+
+/* Inactive Icon */
+.ui.rating .icon {
+  background: @inactiveBackground;
+  color: @inactiveColor;
+}
+
+/* Active Icon */
+.ui.rating .active.icon {
+  background: @activeBackground;
+  color: @activeColor;
+}
+
+/* Selected Icon */
+.ui.rating .icon.selected,
+.ui.rating .icon.selected.active {
+  background: @selectedBackground;
+  color: @selectedColor;
+}
+
+
+/*--------------
+     Colors
+-------------- */
+
+each(@colors, {
+  @color: replace(@key, '@', '');
+  @c: @colors[@@color][color];
+  @l: @colors[@@color][light];
+  @h: @colors[@@color][hover];
+  @lh: @colors[@@color][lightHover];
+
+  .ui.@{color}.rating .active.icon {
+    color: @l;
+    text-shadow: 0px -@shadowWidth 0px @c,
+                 -@shadowWidth 0px 0px @c,
+                 0px @shadowWidth 0px @c,
+                 @shadowWidth 0px 0px @c;
+  }
+  .ui.@{color}.rating .icon.selected,
+  .ui.@{color}.rating .icon.selected.active {
+    color: @lh;
+    text-shadow: 0px -@shadowWidth 0px @h,
+                 -@shadowWidth 0px 0px @h,
+                 0px @shadowWidth 0px @h,
+                 @shadowWidth 0px 0px @h;
+  }
+})
+
+
+/*******************************
+             States
+*******************************/
+
+/*-------------------
+       Disabled
+--------------------*/
+
+/* disabled rating */
+.ui.disabled.rating .icon {
+  cursor: default;
+}
+
+
+/*-------------------
+   User Interactive
+--------------------*/
+
+/* Selected Rating */
+.ui.rating.selected .active.icon {
+  opacity: @interactiveActiveIconOpacity;
+}
+.ui.rating.selected .icon.selected,
+.ui.rating .icon.selected {
+  opacity: @interactiveSelectedIconOpacity;
+}
+
+
+
+/*******************************
+          Variations
+*******************************/
+
+.ui.mini.rating {
+  font-size: @mini;
+}
+.ui.tiny.rating {
+  font-size: @tiny;
+}
+.ui.small.rating {
+  font-size: @small;
+}
+.ui.rating {
+  font-size: @medium;
+}
+.ui.large.rating {
+  font-size: @large;
+}
+.ui.huge.rating {
+  font-size: @huge;
+}
+.ui.massive.rating {
+  font-size: @massive;
+}
+
+
+.loadUIOverrides();

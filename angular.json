@@ -27,9 +27,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "semantic/dist/semantic.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "semantic/dist/semantic.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -84,9 +88,13 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "semantic/dist/semantic.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "semantic/dist/semantic.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
