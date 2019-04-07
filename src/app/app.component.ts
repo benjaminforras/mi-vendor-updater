@@ -37,7 +37,6 @@ export class AppComponent implements OnInit {
     }
 
     get seletedBranches() {
-        console.log(this.branches);
         return this.branches.filter(opt => opt.checked);
     }
 
