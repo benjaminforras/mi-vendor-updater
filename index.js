@@ -159,7 +159,7 @@ let main = async () => {
 
                         console.log("Sending telegram message.");
                         let telegram_message = "New firmware+vendor update available!: \n*Device:* " + link.device + " \n*Codename:* `" + link.codename + "` \n" +
-                            "*Version:* `" + link.version + "` \n*Android:* " + link.android + " \nFilename: `" + file + "` \nFilesize: " + formatBytes(fs.statSync(file).size, 2) + "MB \n" +
+                            "*Version:* `" + link.version + "` \n*Android:* " + link.android + " \nFilename: `" + file + "` \nFilesize: " + formatBytes(fs.statSync(file).size, 2) + " \n" +
                             "*Download:* [Here](https://github.com/TryHardDood/mi-vendor-updater/releases/" + link.codename + "-" + v + ")\n@XiaomiFirmwareUpdater | @MIUIVendorUpdater";
                         try {
                             await bot.telegram.sendMessage(TELEGRAM_CHANNEL, telegram_message, { parse_mode: 'markdown' });
