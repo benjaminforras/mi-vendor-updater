@@ -48,7 +48,6 @@
 
                     <ng-template ngFor let-device [ngForOf]="filteredDevices">
                         <tr class="title">
-                            <td class="collapsing"><i class="drowdown icon"></i></td>
                             <td class="collapsing">
                                 <i class="folder icon"></i> {{device.name}}
                             </td>
@@ -57,7 +56,7 @@
                                 Github</a></td>
                         </tr>
                         <tr class="content">
-                            <td colspan="4">
+                            <td colspan="3">
                                 <div class="ui middle aligned selection list">
                                     <div class="item" *ngFor="let asset of device.assets">
                                         <i class="ui avatar image file archive icon"></i>
