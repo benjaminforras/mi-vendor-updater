@@ -126,7 +126,9 @@ let main = async () => {
                             args: ['-V', link.filename]
                         };
                         PythonShell.run('create_flashable_firmware.py', options, function(err, results) {
-                            if (err) throw err;
+                            if (err) {
+                                console.error(err);
+                            }
                             resolve(results);
                         });
                     });
@@ -160,23 +162,25 @@ let main = async () => {
                             "*Version:* `" + link.version + "` \n*Android:* " + link.android + " \nFilename: `" + file + "` \nFilesize: " + (fs.statSync(file).size / 1000000.0) + "MB \n" +
                             "*Download:* [Here](https://github.com/TryHardDood/mi-vendor-updater/releases/" + link.codename + "-" + v + ")\n@XiaomiFirmwareUpdater | @MIUIVendorUpdater";
                         try {
-                            await bot.telegram.sendMessage(TELEGRAM_CHANNEL, telegram_message, {parse_mode: 'markdown'});
-                        } catch(e3) {
+                            await bot.telegram.sendMessage(TELEGRAM_CHANNEL, telegram_message, { parse_mode: 'markdown' });
+                        } catch (e3) {
                             console.log('Error sending telegram message:');
                             console.log(telegram_message);
                             console.error(e3);
                         }
-						
-						await new Promise((resolve) => {
-							var options = {
-								scriptPath: '.',
-								args: [file]
-							};
-							PythonShell.run('upload-to-telegram.py', options, function(err, results) {
-								if (err) throw err;
-								resolve(results);
-							});
-						});
+
+                        console.log("Uploading to telegram");
+                        await new Promise((resolve) => {
+                            var options = {
+                                args: [file]
+                            };
+                            PythonShell.run('upload-to-telegram.py', options, function(err, results) {
+                                if (err) {
+                                    console.error(err);
+                                }
+                                resolve(results);
+                            });
+                        });
                     } catch (e) {
                         console.log('Couldn\'t upload asset');
                         console.error(e);
