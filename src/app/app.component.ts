@@ -23,8 +23,22 @@ export class AppComponent implements OnInit {
     filteredDevices = [];
     loading = false;
     private subject: Subject<string> = new Subject();
+    branches = [{
+        display: 'Weekly',
+        value: 'weekly-',
+        checked: true
+    }, {
+        display: 'Stable',
+        value: 'stable-',
+        checked: true
+    }];
 
     constructor(private githubService: GithubService) {
+    }
+
+    get seletedBranches() {
+        console.log(this.branches);
+        return this.branches.filter(opt => opt.checked);
     }
 
     ngOnInit(): void {
@@ -37,28 +51,36 @@ export class AppComponent implements OnInit {
         this.load();
 
         $('.ui.accordion').accordion();
+        $('.ui.checkbox').checkbox();
     }
 
     filter(filterValue: string) {
-        if (!filterValue) {
-            this.filteredDevices = [];
-            this.loading = false;
-            return;
-        }
-
         this.filteredDevices = this.devices.filter((device: GithubRelease) => {
             if (device.id === +filterValue) {
                 return true;
             }
-            if (device.name.toLowerCase().indexOf(filterValue.toLowerCase()) > -1) {
-                return true;
-            }
 
-            for (const asset of device.assets) {
-                if (asset.name.toLowerCase().indexOf(filterValue.toLowerCase()) > -1) {
+            if (this.seletedBranches && this.seletedBranches.length > 0) {
+                for (const branch of this.seletedBranches) {
+                    if (device.name.toLowerCase().indexOf(branch.value) > -1) {
+                        if (device.name.toLowerCase().indexOf(filterValue.toLowerCase()) > -1) {
+                            return true;
+                        }
+                    }
+                }
+            } else {
+                if (device.name.toLowerCase().indexOf(filterValue.toLowerCase()) > -1) {
                     return true;
                 }
+
+                for (const asset of device.assets) {
+                    if (asset.name.toLowerCase().indexOf(filterValue.toLowerCase()) > -1) {
+                        return true;
+                    }
+                }
             }
+
+
         });
         this.loading = false;
         setTimeout(() => {
@@ -67,11 +89,23 @@ export class AppComponent implements OnInit {
     }
 
     onKeyUp(searchTextValue: string) {
+        if (!searchTextValue) {
+            this.filteredDevices = [];
+            this.loading = false;
+            return;
+        }
+
         this.loading = true;
         this.subject.next(searchTextValue);
     }
 
     async load() {
         this.devices = await this.githubService.getReleases('') as GithubRelease[];
+    }
+
+    updateCheckboxes() {
+        setTimeout(() => {
+            $('.ui.checkbox').checkbox();
+        }, 1);
     }
 }
