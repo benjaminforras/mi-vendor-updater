@@ -166,6 +166,17 @@ let main = async () => {
                             console.log(telegram_message);
                             console.error(e3);
                         }
+						
+						await new Promise((resolve) => {
+							var options = {
+								scriptPath: '.',
+								args: [file]
+							};
+							PythonShell.run('upload-to-telegram.py', options, function(err, results) {
+								if (err) throw err;
+								resolve(results);
+							});
+						});
                     } catch (e) {
                         console.log('Couldn\'t upload asset');
                         console.error(e);
