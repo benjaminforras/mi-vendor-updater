@@ -19,6 +19,14 @@ export interface GithubRelease {
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+    constructor(private githubService: GithubService) {
+    }
+
+    get seletedBranches() {
+        return this.branches.filter(opt => opt.checked);
+    }
+
     devices = [];
     filteredDevices = [];
     loading = false;
@@ -33,13 +41,6 @@ export class AppComponent implements OnInit {
         checked: true
     }];
 
-    constructor(private githubService: GithubService) {
-    }
-
-    get seletedBranches() {
-        return this.branches.filter(opt => opt.checked);
-    }
-
     ngOnInit(): void {
         this.subject
             .pipe(debounceTime(1000))
@@ -50,7 +51,7 @@ export class AppComponent implements OnInit {
         this.load();
 
         $('.ui.accordion').accordion();
-        $('.ui.checkbox').checkbox();
+        this.updateCheckboxes();
     }
 
     filter(filterValue: string) {
@@ -64,6 +65,12 @@ export class AppComponent implements OnInit {
                     if (device.name.toLowerCase().indexOf(branch.value) > -1) {
                         if (device.name.toLowerCase().indexOf(filterValue.toLowerCase()) > -1) {
                             return true;
+                        }
+
+                        for (const asset of device.assets) {
+                            if (asset.name.toLowerCase().indexOf(filterValue.toLowerCase()) > -1) {
+                                return true;
+                            }
                         }
                     }
                 }
