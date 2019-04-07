@@ -25,11 +25,11 @@ export class AppComponent implements OnInit {
     private subject: Subject<string> = new Subject();
     branches = [{
         display: 'Weekly',
-        value: 'weekly-',
+        value: '-weekly',
         checked: true
     }, {
         display: 'Stable',
-        value: 'stable-',
+        value: '-stable',
         checked: true
     }];
 
