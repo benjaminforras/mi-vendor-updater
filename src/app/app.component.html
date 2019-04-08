@@ -1,7 +1,7 @@
 <div class="ui middle aligned center aligned grid" style="height: 100%;">
-    <div class="sixteen wide table eight wide computer column">
-        <h2 class="ui inverted image header">
-            <i class="circular users image icon"></i>
+	<div class="sixteen wide table eight wide computer column">
+		<h2 class="ui inverted image header">
+			<i class="circular users image icon"></i>
             <div class="content">
                 MIUI Vendor Updater
             </div>
@@ -56,14 +56,11 @@
                         </tr>
                         <tr class="content">
                             <td colspan="3" style="padding: 0 0 0 5px;">
-                                <div class="ui middle aligned selection list">
-                                    <div class="item" *ngFor="let asset of device.assets | orderBy:'-updated_at'">
-                                        <i class="ui avatar image file archive icon"></i>
-                                        <div class="content">
-                                            <div class="header"><a [href]="asset.browser_download_url"
-                                                                   target="_blank">{{asset.name}}</a></div>
-                                        </div>
-                                    </div>
+                                <div class="ui divided selection list">
+                                    <a class="item content truncate" *ngFor="let asset of device.assets | orderBy:'-updated_at'; let i = index"  [href]="asset.browser_download_url" target="_blank">
+                                      <div *ngIf="i === 0" class="ui green horizontal label">Latest</div>
+                                      {{asset.name}}
+                                    </a>
                                 </div>
                             </td>
                         </tr>

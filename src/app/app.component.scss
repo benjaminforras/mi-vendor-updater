@@ -13,3 +13,15 @@ tr.active, .ui.ui.table td.active {
 .item i {
   color: rgba(0, 0, 0, 0.87) !important;
 }
+
+.list .item {
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.truncate {
+  min-width: 410px;
+  overflow:hidden;
+  display:inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
