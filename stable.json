@@ -1,24 +1,12 @@
 [
     {
-        "beryllium_global": "POCOF1Global_V10.2.3.0.PEJMIXM"
-    },
-    {
-        "capricorn": "MI5S_V10.2.1.0.OAGCNXM"
-    },
-    {
-        "capricorn_global": "MI5SGlobal_V10.1.1.0.NAGMIFI"
+        "beryllium_global": "POCOF1Global_V10.3.4.0.PEJMIXM"
     },
     {
         "cepheus": "CEPHEUS_V10.2.16.0.PFACNXM"
     },
     {
         "cepheus_eea_global": "undefined_undefined"
-    },
-    {
-        "chiron": "MIMIX2_V10.2.2.0.ODECNXM"
-    },
-    {
-        "chiron_global": "MIMIX2Global_V10.2.2.0.ODEMIXM"
     },
     {
         "clover": "MIPAD4_V10.2.1.0.ODJCNXM"
@@ -43,12 +31,6 @@
     },
     {
         "lavender_in_global": "LAVENDERINGlobal_V10.2.7.0.PFGINXM"
-    },
-    {
-        "lithium": "MIMIX_V10.2.1.0.OAHCNFK"
-    },
-    {
-        "lithium_global": "MIMIXGlobal_V10.2.1.0.OAHMIXM"
     },
     {
         "nitrogen": "MIMAX3_V10.2.1.0.OEDCNXM"
@@ -81,25 +63,10 @@
         "sakura_india_global": "HM6ProINGlobal_V10.2.6.0.ODMMIXM"
     },
     {
-        "scorpio": "MINote2_V10.2.1.0.OADCNFK"
-    },
-    {
-        "scorpio_global": "MINote2Global_V10.2.1.0.OADMIXM"
-    },
-    {
         "sirius": "MI8SE_V10.2.3.0.PEBCNXM"
     },
     {
-        "tiffany": "MI5X_V10.2.3.0.ODBCNXM"
-    },
-    {
         "ursa": "MI8Explorer_V10.2.1.0.PEHCNXM"
-    },
-    {
-        "vince": "HM5Plus_V10.2.4.0.OEGCNXM"
-    },
-    {
-        "vince_global": "HM5PlusGlobal_V10.0.4.0.OEGMIFH"
     },
     {
         "violet": "VIOLET_V10.2.5.0.PFHCNXM"
