@@ -3,16 +3,13 @@
         "beryllium_global": "POCOF1Global_V10.2.3.0.PEJMIXM"
     },
     {
-        "cappu": "MIPAD3_V10.2.1.0.NCICNXM"
-    },
-    {
         "capricorn": "MI5S_V10.2.1.0.OAGCNXM"
     },
     {
         "capricorn_global": "MI5SGlobal_V10.1.1.0.NAGMIFI"
     },
     {
-        "cepheus": "CEPHEUS_V10.2.15.0.PFACNXM"
+        "cepheus": "CEPHEUS_V10.2.16.0.PFACNXM"
     },
     {
         "cepheus_eea_global": "undefined_undefined"
@@ -42,33 +39,6 @@
         "grus": "GRUS_V10.2.5.0.PFBCNXM"
     },
     {
-        "helium": "MIMAX652_V10.2.1.0.NBDCNXM"
-    },
-    {
-        "helium_global": "MIMAX652Global_V10.2.1.0.NBDMIXM"
-    },
-    {
-        "hydrogen": "MIMAX_V10.2.1.0.NBCCNFK"
-    },
-    {
-        "hydrogen_global": "MIMAXGlobal_V10.2.1.0.NBCMIXM"
-    },
-    {
-        "jason": "MINote3_V10.2.3.0.OCHCNFK"
-    },
-    {
-        "jason_global": "MINote3Global_V10.3.2.0.OCHMIXM"
-    },
-    {
-        "kate_global": "HMNote3ProtwGlobal_V10.2.1.0.MHRMIXM"
-    },
-    {
-        "land": "HM3S_V10.2.1.0.MALCNXM"
-    },
-    {
-        "land_global": "HM3SGlobal_V10.2.1.0.MALMIXM"
-    },
-    {
         "lavender": "LAVENDER_V10.2.13.0.PFGCNXM"
     },
     {
@@ -81,34 +51,10 @@
         "lithium_global": "MIMIXGlobal_V10.2.1.0.OAHMIXM"
     },
     {
-        "markw": "HM4Pro_V10.2.1.0.MBECNXM"
-    },
-    {
-        "mido": "HMNote4X_V10.2.2.0.NCFCNXM"
-    },
-    {
-        "mido_global": "HMNote4XGlobal_V10.2.3.0.NCFMIXM"
-    },
-    {
-        "natrium": "MI5SPlus_V10.2.1.0.OBGCNXM"
-    },
-    {
-        "natrium_global": "MI5SPlusGlobal_V10.2.2.0.OBGMIXM"
-    },
-    {
         "nitrogen": "MIMAX3_V10.2.1.0.OEDCNXM"
     },
     {
         "nitrogen_global": "MIMAX3Global_V10.2.1.0.PEDMIXM"
-    },
-    {
-        "onclite": "ONCLITE_V10.2.5.0.PFLCNXM"
-    },
-    {
-        "oxygen": "MIMAX2_V10.2.1.0.NDDCNXM"
-    },
-    {
-        "oxygen_global": "MIMAX2Global_V10.2.1.0.NDDMIXM"
     },
     {
         "perseus": "MIMIX3_V10.2.2.0.PEECNXM"
@@ -129,43 +75,10 @@
         "polaris_global": "MIMIX2SGlobal_V10.2.2.0.PDGMIXM"
     },
     {
-        "prada": "HM4_V10.2.1.0.MCECNXM"
-    },
-    {
-        "riva": "HM5A_V10.2.3.0.OCKCNXM"
-    },
-    {
-        "riva_global": "HM5AGlobal_V10.1.1.0.NCKMIFI"
-    },
-    {
-        "rolex": "HM4A_V10.2.1.0.MCCCNXM"
-    },
-    {
-        "rolex_global": "HM4AGlobal_V10.2.1.0.NCCMIXM"
-    },
-    {
-        "rosy": "HM5_V10.2.3.0.ODACNXM"
-    },
-    {
-        "rosy_global": "HM5Global_V10.1.2.0.NDAMIFI"
-    },
-    {
-        "sagit": "MI6_V10.3.1.0.OCACNXM"
-    },
-    {
-        "sagit_global": "MI6Global_V10.2.1.0.OCAMIXM"
-    },
-    {
         "sakura": "HM6Pro_V10.2.2.0.ODICNXM"
     },
     {
         "sakura_india_global": "HM6ProINGlobal_V10.2.6.0.ODMMIXM"
-    },
-    {
-        "santoni": "HM4X_V10.1.1.0.NAMCNFI"
-    },
-    {
-        "santoni_global": "HM4XGlobal_V10.1.1.0.NAMMIFI"
     },
     {
         "scorpio": "MINote2_V10.2.1.0.OADCNFK"
@@ -178,21 +91,6 @@
     },
     {
         "tiffany": "MI5X_V10.2.3.0.ODBCNXM"
-    },
-    {
-        "tulip_global": "HMNote6ProGlobal_V10.2.2.0.OEKMIXM"
-    },
-    {
-        "ugg": "HMNote5A_V10.2.1.0.NDKCNXM"
-    },
-    {
-        "ugg_global": "HMNote5AGlobal_V10.2.1.0.NDKMIXM"
-    },
-    {
-        "ugglite": "HMNote5ALITE_V10.2.1.0.NDFCNXM"
-    },
-    {
-        "ugglite_global": "HMNote5ALITEGlobal_V10.2.1.0.NDFMIXM"
     },
     {
         "ursa": "MI8Explorer_V10.2.1.0.PEHCNXM"
