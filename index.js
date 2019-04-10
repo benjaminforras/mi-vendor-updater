@@ -7,7 +7,7 @@ const jsonDiff = require('json-diff');
 let { PythonShell } = require('python-shell');
 const { exec } = require('child_process');
 
-const Octokit = require('@octokit/rest')
+const Octokit = require('@octokit/rest');
 const octokit = new Octokit({
     auth: 'token ' + process.env.GITHUB_TOKEN,
     baseUrl: 'https://api.github.com'
@@ -67,12 +67,12 @@ let main = async () => {
             fs.renameSync(v + '.json', v + '_old.json');
         }
 
-        if (v == 'stable') {
+        if (v === 'stable') {
             devices_all = stable_all;
             devices = stable_devices;
             branch = stable;
         }
-        else if (v == "weekly") {
+        else if (v === "weekly") {
             devices_all = weekly_all;
             devices = weekly_devices;
             branch = weekly;
@@ -101,7 +101,7 @@ let main = async () => {
                     if (diff[change][0].indexOf('+') > -1) {
                         for (let codename of Object.keys(diff[change][1])) {
                             for (let info of devices_all) {
-                                if (info.filename.split('_')[1] + '_' + info.filename.split('_')[2] == diff[change][1][codename]) {
+                                if (info.filename.split('_')[1] + '_' + info.filename.split('_')[2] === diff[change][1][codename]) {
                                     let obj = { codename: codename, filename: info.filename, download: info.download, device: info.device, android: info.android, version: info.version };
                                     links.push(obj);
                                     console.log("New version for " + codename + " is available (" + info.filename + ")");
@@ -197,6 +197,6 @@ let main = async () => {
     console.log("Done");
 }
 
-function formatBytes(a, b) { if (0 == a) return "0 Bytes"; var c = 1024, d = b || 2, e = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"], f = Math.floor(Math.log(a) / Math.log(c)); return parseFloat((a / Math.pow(c, f)).toFixed(d)) + " " + e[f] }
+function formatBytes(a, b) { if (0 === a) return "0 Bytes"; var c = 1024, d = b || 2, e = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"], f = Math.floor(Math.log(a) / Math.log(c)); return parseFloat((a / Math.pow(c, f)).toFixed(d)) + " " + e[f] }
 
 main();
