@@ -157,7 +157,7 @@ let main = async () => {
                             "*Version:* `" + link.version + "` \n*Android:* " + link.android + " \nFilename: `" + file + "` \nFilesize: " + formatBytes(fs.statSync(file).size, 2) + " \n" +
                             "*Download:* [Here](https://github.com/TryHardDood/mi-vendor-updater/releases/" + link.codename + "-" + v + ")\n@XiaomiFirmwareUpdater | @MIUIVendorUpdater";
                         try {
-                            await bot.telegram.sendMessage(TELEGRAM_CHANNEL, telegram_message, { parse_mode: 'markdown' });
+                            await bot.telegram.sendMessage(TELEGRAM_CHANNEL, telegram_message, { parse_mode: 'markdown', disable_web_page_preview: true });
                         } catch (e3) {
                             console.log('Error sending telegram message:');
                             console.log(telegram_message);
