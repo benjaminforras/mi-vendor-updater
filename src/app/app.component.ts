@@ -45,7 +45,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.subject
       .pipe(debounceTime(1000))
-      .pipe(distinctUntilChanged())
       .subscribe(searchTextValue => {
         this.filter(searchTextValue);
       });
