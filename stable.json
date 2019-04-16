@@ -45,7 +45,7 @@
         "perseus_global": "MIMIX3Global_V10.2.2.0.PEEMIXM"
     },
     {
-        "platina": "MI8Lite_V10.2.3.0.ODTCNXM"
+        "platina": "MI8Lite_V10.2.3.0.PDTCNXM"
     },
     {
         "platina_global": "MI8LiteGlobal_V10.2.2.0.PDTMIXM"
@@ -57,7 +57,7 @@
         "polaris_global": "MIMIX2SGlobal_V10.2.2.0.PDGMIXM"
     },
     {
-        "sakura": "HM6Pro_V10.2.2.0.ODICNXM"
+        "sakura": "HM6Pro_V10.3.1.0.PDICNXM"
     },
     {
         "sakura_india_global": "HM6ProINGlobal_V10.2.6.0.ODMMIXM"
