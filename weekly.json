@@ -1,9 +1,9 @@
 [
     {
-        "beryllium_global": "POCOF1Global_9.4.12"
+        "beryllium_global": "POCOF1Global_9.4.18"
     },
     {
-        "cepheus": "CEPHEUS_9.4.1"
+        "cepheus": "CEPHEUS_9.4.18"
     },
     {
         "clover": "MIPAD4_9.4.18"
@@ -12,46 +12,46 @@
         "dipper": "MI8_9.4.18"
     },
     {
-        "dipper_global": "MI8Global_9.4.12"
+        "dipper_global": "MI8Global_9.4.18"
     },
     {
         "equuleus": "MI8UD_9.4.18"
     },
     {
-        "equuleus_global": "MI8UDGlobal_9.4.12"
+        "equuleus_global": "MI8UDGlobal_9.4.18"
     },
     {
-        "lavender": "LAVENDER_9.4.18"
+        "lavender": "LAVENDER_9.4.12"
     },
     {
         "nitrogen": "MIMAX3_9.4.18"
     },
     {
-        "nitrogen_global": "MIMAX3Global_9.4.12"
+        "nitrogen_global": "MIMAX3Global_9.4.18"
     },
     {
         "perseus": "MIMIX3_9.4.18"
     },
     {
-        "perseus_global": "MIMIX3Global_9.4.12"
+        "perseus_global": "MIMIX3Global_9.4.18"
     },
     {
         "platina": "MI8Lite_9.4.18"
     },
     {
-        "platina_global": "MI8LiteGlobal_9.4.12"
+        "platina_global": "MI8LiteGlobal_9.4.18"
     },
     {
         "polaris": "MIMIX2S_9.4.18"
     },
     {
-        "polaris_global": "MIMIX2SGlobal_9.4.12"
+        "polaris_global": "MIMIX2SGlobal_9.4.18"
     },
     {
         "sakura": "HM6Pro_9.4.18"
     },
     {
-        "sakura_india_global": "HM6ProINGlobal_9.4.12"
+        "sakura_india_global": "HM6ProINGlobal_9.4.18"
     },
     {
         "sirius": "MI8SE_9.4.12"
@@ -66,7 +66,7 @@
         "whyred": "HMNote5_9.4.18"
     },
     {
-        "whyred_global": "HMNote5Global_9.4.12"
+        "whyred_global": "HMNote5Global_9.4.18"
     },
     {
         "ysl": "HMS2_9.2.28"
