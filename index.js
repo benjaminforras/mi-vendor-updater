@@ -126,6 +126,9 @@ let main = async () => {
                     fs.unlinkSync(link.filename);
 
                     var file = fs.readdirSync('.').filter(fn => fn.startsWith('fw-vendor_') && fn.endsWith('.zip'))[0];
+                    // Sorten filename
+                    fs.renameSync(file, 'fw-vendor_' + link.codename + '_' + link.version + '.zip');
+                    file = 'fw-vendor_' + link.codename + '_' + link.version + '.zip';
                     console.log("done generating vendor: " + file);
 
                     const tagname = link.codename + '-' + v;
