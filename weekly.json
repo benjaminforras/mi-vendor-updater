@@ -6,7 +6,7 @@
         "cepheus": "CEPHEUS_9.4.18"
     },
     {
-        "clover": "MIPAD4_9.4.18"
+        "clover": "MIPAD4_9.4.25"
     },
     {
         "dipper": "MI8_9.4.18"
@@ -21,10 +21,10 @@
         "equuleus_global": "MI8UDGlobal_9.4.18"
     },
     {
-        "lavender": "LAVENDER_9.4.22"
+        "lavender": "LAVENDER_9.4.25"
     },
     {
-        "nitrogen": "MIMAX3_9.4.18"
+        "nitrogen": "MIMAX3_9.4.25"
     },
     {
         "nitrogen_global": "MIMAX3Global_9.4.18"
@@ -36,7 +36,7 @@
         "perseus_global": "MIMIX3Global_9.4.18"
     },
     {
-        "platina": "MI8Lite_9.4.18"
+        "platina": "MI8Lite_9.4.25"
     },
     {
         "platina_global": "MI8LiteGlobal_9.4.18"
@@ -48,22 +48,22 @@
         "polaris_global": "MIMIX2SGlobal_9.4.18"
     },
     {
-        "sakura": "HM6Pro_9.4.18"
+        "sakura": "HM6Pro_9.4.25"
     },
     {
         "sakura_india_global": "HM6ProINGlobal_9.4.18"
     },
     {
-        "sirius": "MI8SE_9.4.19"
+        "sirius": "MI8SE_9.4.25"
     },
     {
-        "ursa": "MI8Explorer_9.4.18"
+        "ursa": "MI8Explorer_9.4.25"
     },
     {
         "wayne": "MI6X_9.4.18"
     },
     {
-        "whyred": "HMNote5_9.4.18"
+        "whyred": "HMNote5_9.4.25"
     },
     {
         "whyred_global": "HMNote5Global_9.4.18"
