@@ -1,35 +1,50 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpResponse} from '@angular/common/http';
 
 const GITHUB_API = 'https://api.github.com/repos/TryHardDood/mi-vendor-updater/releases';
 const REGEX_LINKS = /<(.*?)>/g;
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class GithubService {
+    prevValue: number;
+    devices = [];
 
-  devices = [];
-
-  constructor(private httpClient: HttpClient) {
-  }
-
-  async getReleases(url) {
-    if (!url) {
-      url = GITHUB_API;
+    constructor(private httpClient: HttpClient) {
+        this.prevValue = 1;
     }
 
-    await this.httpClient.get(url, { observe: 'response' }).subscribe(async (response: HttpResponse<any>) => {
-      if (response.headers.get('Link') && response.headers.get('Link').length > 0) {
-        const data = response.headers.get('Link').match(REGEX_LINKS);
-        if (data.length === 2) {
-          this.devices.push(...response.body);
-          await this.getReleases(data[0].replace('<', '').replace('>', ''));
+    async getReleases(url) {
+        if (!url) {
+            url = GITHUB_API;
         }
-      } else {
-        this.devices.push(...response.body);
-      }
-    });
-    return this.devices;
-  }
+
+        await this.httpClient.get(url, {observe: 'response'}).subscribe(async (response: HttpResponse<any>) => {
+            if (response.headers.get('Link') && response.headers.get('Link').length > 0) {
+                const data = response.headers.get('Link').match(REGEX_LINKS);
+                console.log(data);
+                if (data.length === 2) {
+                    console.log(data[1]);
+                    this.devices.push(...response.body);
+                    const newUrl = data[1].replace('<', '').replace('>', '');
+                    const newValue = this.extractUrlValue('page', newUrl);
+                    if (this.prevValue < newValue) {
+                        await this.getReleases(newUrl);
+                    }
+                }
+            } else {
+                this.devices.push(...response.body);
+            }
+        });
+        return this.devices;
+    }
+
+    extractUrlValue(key, url) {
+        if (typeof (url) === 'undefined') {
+            url = window.location.href;
+        }
+        const match = url.match('[?&]' + key + '=([^&]+)');
+        return match ? match[1] : null;
+    }
 }
