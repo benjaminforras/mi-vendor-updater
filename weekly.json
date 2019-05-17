@@ -3,7 +3,7 @@
         "beryllium_global": "POCOF1Global_9.4.26"
     },
     {
-        "cepheus": "CEPHEUS_9.5.9"
+        "cepheus": "CEPHEUS_9.5.16"
     },
     {
         "clover": "MIPAD4_9.4.25"
@@ -21,10 +21,10 @@
         "equuleus_global": "MI8UDGlobal_9.5.9"
     },
     {
-        "lavender": "LAVENDER_9.5.9"
+        "lavender": "LAVENDER_9.5.16"
     },
     {
-        "nitrogen": "MIMAX3_9.5.9"
+        "nitrogen": "MIMAX3_9.5.16"
     },
     {
         "nitrogen_global": "MIMAX3Global_9.5.9"
@@ -54,13 +54,13 @@
         "sakura_india_global": "HM6ProINGlobal_9.5.9"
     },
     {
-        "sirius": "MI8SE_9.5.9"
+        "sirius": "MI8SE_9.5.16"
     },
     {
         "ursa": "MI8Explorer_9.5.9"
     },
     {
-        "wayne": "MI6X_9.5.9"
+        "wayne": "MI6X_9.5.16"
     },
     {
         "whyred": "HMNote5_9.5.9"
