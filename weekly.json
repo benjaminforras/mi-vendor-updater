@@ -12,13 +12,13 @@
         "dipper": "MI8_9.5.17"
     },
     {
-        "dipper_global": "MI8Global_9.5.9"
+        "dipper_global": "MI8Global_9.5.17"
     },
     {
         "equuleus": "MI8UD_9.5.17"
     },
     {
-        "equuleus_global": "MI8UDGlobal_9.5.9"
+        "equuleus_global": "MI8UDGlobal_9.5.17"
     },
     {
         "lavender": "LAVENDER_9.5.16"
@@ -33,7 +33,7 @@
         "perseus": "MIMIX3_9.5.17"
     },
     {
-        "perseus_global": "MIMIX3Global_9.5.9"
+        "perseus_global": "MIMIX3Global_9.5.17"
     },
     {
         "platina": "MI8Lite_9.5.16"
@@ -45,7 +45,7 @@
         "polaris": "MIMIX2S_9.5.17"
     },
     {
-        "polaris_global": "MIMIX2SGlobal_9.5.9"
+        "polaris_global": "MIMIX2SGlobal_9.5.17"
     },
     {
         "sakura": "HM6Pro_9.5.16"
