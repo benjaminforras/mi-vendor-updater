@@ -9,13 +9,13 @@
         "clover": "MIPAD4_9.5.16"
     },
     {
-        "dipper": "MI8_9.5.9"
+        "dipper": "MI8_9.5.17"
     },
     {
         "dipper_global": "MI8Global_9.5.9"
     },
     {
-        "equuleus": "MI8UD_9.5.9"
+        "equuleus": "MI8UD_9.5.17"
     },
     {
         "equuleus_global": "MI8UDGlobal_9.5.9"
@@ -30,7 +30,7 @@
         "nitrogen_global": "MIMAX3Global_9.5.16"
     },
     {
-        "perseus": "MIMIX3_9.5.9"
+        "perseus": "MIMIX3_9.5.17"
     },
     {
         "perseus_global": "MIMIX3Global_9.5.9"
@@ -42,7 +42,7 @@
         "platina_global": "MI8LiteGlobal_9.5.16"
     },
     {
-        "polaris": "MIMIX2S_9.5.9"
+        "polaris": "MIMIX2S_9.5.17"
     },
     {
         "polaris_global": "MIMIX2SGlobal_9.5.9"
@@ -57,7 +57,7 @@
         "sirius": "MI8SE_9.5.16"
     },
     {
-        "ursa": "MI8Explorer_9.5.9"
+        "ursa": "MI8Explorer_9.5.17"
     },
     {
         "violet": "VIOLET_9.5.16"
