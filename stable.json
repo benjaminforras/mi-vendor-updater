@@ -12,7 +12,10 @@
         "clover": "MIPAD4_V10.2.1.0.ODJCNXM"
     },
     {
-        "dipper": "MI8_V10.2.3.0.PEACNXM"
+        "davinci": "DAVINCI_V10.3.6.0.PFJCNXM"
+    },
+    {
+        "dipper": "MI8_V10.3.3.0.PEACNXM"
     },
     {
         "dipper_global": "MI8Global_V10.3.2.0.PEAMIXM"
@@ -51,10 +54,13 @@
         "platina_global": "MI8LiteGlobal_V10.3.1.0.PDTMIXM"
     },
     {
-        "polaris": "MIMIX2S_V10.3.1.0.PDGCNXM"
+        "polaris": "MIMIX2S_V10.3.2.0.PDGCNXM"
     },
     {
         "polaris_global": "MIMIX2SGlobal_V10.2.2.0.PDGMIXM"
+    },
+    {
+        "raphael": "RAPHAEL_V10.3.6.0.PFKCNXM"
     },
     {
         "sakura": "HM6Pro_V10.3.1.0.PDICNXM"
