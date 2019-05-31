@@ -1,5 +1,9 @@
 <div class="ui large form">
     <div class="ui stacked segment">
+        <div class="ui active dimmer" *ngIf="loadingDevices" style="padding: 5px;">
+            <div class="ui text loader">Loading</div>
+        </div>
+
         <div class="field">
             <div class="ui left icon input" [class.loading]="loading">
                 <input type="text" placeholder="Search..." #searchText (keyup)="onKeyUp(searchText.value)"/>

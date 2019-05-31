@@ -1,7 +1,9 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpResponse} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 
-const GITHUB_API = 'https://api.github.com/repos/TryHardDood/mi-vendor-updater/releases';
+import * as Octokat from 'octokat';
+
+const GITHUB_API = 'https://api.github.com/repositories/179057194/releases?page=1';
 const REGEX_LINKS = /<(.*?)>/g;
 
 @Injectable({
@@ -11,31 +13,30 @@ export class GithubService {
     prevValue: number;
     devices = [];
 
+    private octo: Octokat;
+    private repo: any;
+
     constructor(private httpClient: HttpClient) {
-        this.prevValue = 1;
+        this.prevValue = 0;
+        this.octo = new Octokat();
+        this.repo = this.octo.repos('TryHardDood', 'mi-vendor-updater');
     }
 
     async getReleases(url) {
-        if (!url) {
-            url = GITHUB_API;
-        }
+        this.devices = [];
+        await this.repo.releases.fetch().then(async (releases) => {
+            this.devices.push(releases.items);
+            await releases.nextPage.fetch().then(async (first) => {
+                this.devices.push(first.items);
+                await first.nextPage.fetch().then(async (second) => {
+                    this.devices.push(second.items);
 
-        await this.httpClient.get(url, {observe: 'response'}).subscribe(async (response: HttpResponse<any>) => {
-            if (response.headers.get('Link') && response.headers.get('Link').length > 0) {
-                const data = response.headers.get('Link').match(REGEX_LINKS);
-                console.log(data);
-                if (data.length === 2) {
-                    console.log(data[1]);
-                    this.devices.push(...response.body);
-                    const newUrl = data[1].replace('<', '').replace('>', '');
-                    const newValue = this.extractUrlValue('page', newUrl);
-                    if (this.prevValue < newValue) {
-                        await this.getReleases(newUrl);
-                    }
-                }
-            } else {
-                this.devices.push(...response.body);
-            }
+                    const flat = e => e.reduce(
+                        (a, b) => a.concat(Array.isArray(b) ? flat(b) : b), []
+                    );
+                    this.devices = flat(this.devices);
+                });
+            });
         });
         return this.devices;
     }
