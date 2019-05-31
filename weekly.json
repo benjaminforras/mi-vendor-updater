@@ -1,6 +1,6 @@
 [
     {
-        "beryllium_global": "POCOF1Global_9.5.17"
+        "beryllium_global": "POCOF1Global_9.5.30"
     },
     {
         "cepheus": "CEPHEUS_9.5.16"
@@ -12,13 +12,13 @@
         "dipper": "MI8_9.5.30"
     },
     {
-        "dipper_global": "MI8Global_9.5.17"
+        "dipper_global": "MI8Global_9.5.30"
     },
     {
         "equuleus": "MI8UD_9.5.30"
     },
     {
-        "equuleus_global": "MI8UDGlobal_9.5.17"
+        "equuleus_global": "MI8UDGlobal_9.5.30"
     },
     {
         "lavender": "LAVENDER_9.5.23"
@@ -33,7 +33,7 @@
         "perseus": "MIMIX3_9.5.30"
     },
     {
-        "perseus_global": "MIMIX3Global_9.5.17"
+        "perseus_global": "MIMIX3Global_9.5.30"
     },
     {
         "platina": "MI8Lite_9.5.23"
