@@ -22,11 +22,6 @@ export class GithubService {
 
   async getReleases() {
     this.devices = [];
-
-    this.snackBar.open('Loading devices..', '', {
-      duration: 5000
-    });
-
     await this.repo.releases.fetch().then(async (releases) => {
       this.devices.push(releases.items);
       await releases.nextPage.fetch().then(async (first) => {

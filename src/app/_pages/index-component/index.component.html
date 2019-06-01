@@ -43,8 +43,8 @@
             <div class="d-none d-md-block col-md-4" style="text-align: right;">
               <h5>{{device.publishedAt | date:'medium'}}</h5>
             </div>
-            <div class="col-sm-5 col-md-3" style="text-align: center;">
-              <h3 style="cursor: pointer;"><a [href]="device.htmlUrl" target="_blank">View on Github</a></h3>
+            <div class="col-sm-5 col-md-3" style="text-align: right;padding-right: 5px;">
+              <h3 style="cursor: pointer;"><a [href]="device.htmlUrl" target="_blank"><span class="d-none d-md-block">View on Github</span><span class="d-md-none">Github</span></a></h3>
             </div>
           </mat-expansion-panel-header>
 
