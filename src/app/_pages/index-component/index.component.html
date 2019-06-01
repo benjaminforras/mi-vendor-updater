@@ -1,68 +1,63 @@
-<div class="ui large form">
-    <div class="ui stacked segment">
-        <div class="ui active dimmer" *ngIf="loadingDevices" style="padding: 5px;">
-            <div class="ui text loader">Loading</div>
-        </div>
+<mat-card class="row">
+  <mat-form-field class="col-12" appearance="outline" style="width: 100%;">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="Search..." #searchText (keyup)="onKeyUp(searchText.value)"
+           [disabled]="loadingDevices || githubService.error">
+    <mat-icon matSuffix *ngIf="loading">
+      <mat-spinner [diameter]="25"></mat-spinner>
+    </mat-icon>
+  </mat-form-field>
+  <mat-checkbox class="col-6" *ngFor="let branch of branches" [value]="branch.value" [(ngModel)]="branch.checked">
+    {{branch.display}}
+  </mat-checkbox>
+  <button class="col-12" style="margin-top: 20px;" mat-stroked-button color="primary"
+          (click)="onKeyUp(searchText.value)" [disabled]="loadingDevices || githubService.error">
+    <mat-icon *ngIf="!loadingDevices && !githubService.error">search</mat-icon>
+    <mat-icon *ngIf="loadingDevices">
+      <mat-spinner [diameter]="20"></mat-spinner>
+    </mat-icon>
+    <mat-icon *ngIf="githubService.error">warning</mat-icon>
+    {{loadingDevices ? 'Loading devices...' : githubService.error ? 'Error' : 'Search'}}
+  </button>
+</mat-card>
 
-        <div class="field">
-            <div class="ui left icon input" [class.loading]="loading">
-                <input type="text" placeholder="Search..." #searchText (keyup)="onKeyUp(searchText.value)"/>
-                <i class="search icon"></i>
-            </div>
-        </div>
-        <div class="ui form">
-            <div class="inline fields">
-                <label>Filter:</label>
-                <div class="field">
-                    <div class="ui checkbox" *ngFor="let branch of branches" (click)="updateCheckboxes()">
-                        <input type="checkbox" tabindex="0" class="hidden" [value]="branch.value"
-                                [(ngModel)]="branch.checked"/>
-                        <label>{{branch.display}}</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="ui fluid large teal submit button" (click)="onKeyUp(searchText.value)">Search</div>
-    </div>
+<ng-template #placeholderTemplate>
+  <mat-card class="row" style="margin-top: 20px;text-align: center;" *ngIf="searchText.value.length > 0 && !loading">
+    <p>Couldn't find {{searchText.value}}</p>
+  </mat-card>
+</ng-template>
 
-    <ng-template #placeholderTemplate>
-        <div *ngIf="searchText.value.length > 0 && !loading" class="ui negative message">
-            <i class="close icon"></i>
-            <div class="header">
-                We're sorry!
+<mat-card class="row" style="margin-top: 20px;"
+          *ngIf="filteredDevices && filteredDevices.length > 0; else placeholderTemplate">
+  <mat-card-header>
+    <mat-card-title>Search results:</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-accordion>
+      <ng-template ngFor let-device [ngForOf]="filteredDevices | orderBy:'-publishedAt'">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header style="white-space: nowrap;">
+            <div class="col-sm-5 col-md-4" style="text-align: left;">
+              <h3>{{device.name}}</h3>
             </div>
-            <p>Couldn't find {{searchText.value}}</p>
-        </div>
-    </ng-template>
+            <div class="d-none d-md-block col-md-4" style="text-align: right;">
+              <h5>{{device.publishedAt | date:'medium'}}</h5>
+            </div>
+            <div class="col-sm-5 col-md-3" style="text-align: center;">
+              <h3 style="cursor: pointer;"><a [href]="device.htmlUrl" target="_blank">View on Github</a></h3>
+            </div>
+          </mat-expansion-panel-header>
 
-    <div class="ui stacked segment" *ngIf="filteredDevices && filteredDevices.length > 0; else placeholderTemplate">
-        <h3 class="ui header">
-            Search results:
-        </h3>
-        <table class="ui celled striped unstackable table">
-            <tbody class="ui styled accordion">
-            <ng-template ngFor let-device [ngForOf]="filteredDevices | orderBy:'-published_at'">
-                <tr class="title">
-                    <td class="collapsing">
-                        <i class="folder icon"></i> {{device.name}}
-                    </td>
-                    <td>{{device.published_at | date:'medium'}}</td>
-                    <td><a [href]="device.html_url" target="_blank">View on
-                        Github</a></td>
-                </tr>
-                <tr class="content">
-                    <td colspan="3" style="padding: 0 0 0 5px;">
-                        <div class="ui divided selection list">
-                            <a class="item content truncate" *ngFor="let asset of device.assets | orderBy:'-updated_at'; let i = index"  [href]="asset.browser_download_url" target="_blank">
-                              <div *ngIf="i === 0" class="ui green horizontal label">Latest</div>
-                              {{asset.name}}
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-            </ng-template>
-            </tbody>
-        </table>
-    </div>
-    <div class="ui error message"></div>
-</div>
+          <mat-action-list>
+            <a mat-list-item *ngFor="let asset of device.assets | orderBy:'-updatedAt'; let i = index"
+               [href]="asset.browserDownloadUrl" target="_blank"
+               [matTooltip]="'Downloaded ' + asset.downloadCount + ' time(s).'" [matTooltipPosition]="'above'">
+              <p matLine>{{asset.name}} <span style="float:right;" class="badge d-none d-md-block">{{formatBytes(asset.size)}}</span><span
+                style="float: right;" class="badge badge-success d-none d-md-block" *ngIf="i === 0">Latest</span></p>
+            </a>
+          </mat-action-list>
+        </mat-expansion-panel>
+      </ng-template>
+    </mat-accordion>
+  </mat-card-content>
+</mat-card>

@@ -1,27 +1,20 @@
-tr.active, .ui.ui.table td.active {
-  background: transparent !important;
+.badge {
+  font-family: 'Lato', sans-serif;
+  font-size: .7rem;
+  padding: .2rem .4rem;
+  border-radius: 5px;
+  color: #5D5D5D;
+  font-weight: bold;
+  background: #E8E8E8;
+  margin-left: 10px;
 }
 
-.styled.accordion .content {
-  padding: 0.5em 0.5em 0.5em !important;
+.badge-info {
+  color: #FFFFFF;
+  background-color: #1678C2;
 }
 
-.ui.styled.accordion .title, .ui.styled.accordion .accordion .title {
-  color: rgba(0, 0, 0, 0.87) !important;
-}
-
-.item i {
-  color: rgba(0, 0, 0, 0.87) !important;
-}
-
-.list .item {
-  color: rgba(0, 0, 0, 0.87) !important;
-}
-
-.truncate {
-  min-width: 410px;
-  overflow:hidden;
-  display:inline-block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.badge-success {
+  color: #FFFFFF;
+  background-color: #00c853;
 }
