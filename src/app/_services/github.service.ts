@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 
 import * as Octokat from 'octokat';
 import {MatSnackBar} from '@angular/material';
+import {GithubRelease} from '../_pages/index-component/index.component';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,14 @@ export class GithubService {
     this.prevValue = 0;
     this.octo = new Octokat();
     this.repo = this.octo.repos('TryHardDood', 'mi-vendor-updater');
+  }
+
+  async getRelease(id: number) {
+    let release: GithubRelease;
+    await this.repo.releases(id).fetch().then(async (response) => {
+      release = response;
+    });
+    return release;
   }
 
   async getReleases() {

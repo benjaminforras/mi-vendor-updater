@@ -2,6 +2,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {GithubService} from '../../_services/github.service';
 import {debounceTime} from 'rxjs/operators';
 import {Subject} from 'rxjs';
+import {ActivatedRoute} from '@angular/router';
 
 export interface GithubRelease {
   id: number;
@@ -18,23 +19,18 @@ export interface GithubRelease {
 })
 export class IndexComponent implements OnInit {
 
-  @ViewChild('searchText') searchText: ElementRef;
+  @ViewChild('searchText')
+  searchText: ElementRef;
+  
   devices = [];
   filteredDevices = [];
   loading = false;
   loadingDevices = false;
-  branches = [{
-    display: 'Weekly',
-    value: '-weekly',
-    checked: true
-  }, {
-    display: 'Stable',
-    value: '-stable',
-    checked: true
-  }];
+  branches = [{display: 'Weekly', value: '-weekly', checked: true}, {display: 'Stable', value: '-stable', checked: true}];
+
   private subject: Subject<string> = new Subject();
 
-  constructor(public githubService: GithubService) {
+  constructor(public githubService: GithubService, private activatedRoute: ActivatedRoute) {
   }
 
   get seletedBranches() {
@@ -102,6 +98,16 @@ export class IndexComponent implements OnInit {
     this.loadingDevices = true;
     this.devices = await this.githubService.getReleases() as GithubRelease[];
     this.loadingDevices = false;
+
+    const id = +this.activatedRoute.snapshot.params.id;
+    if (id) {
+      try {
+        const release = await this.githubService.getRelease(id) as GithubRelease;
+        this.searchText.nativeElement.value = release.id;
+        this.filter('' + release.id);
+      } catch (e) {
+      }
+    }
   }
 
   formatBytes(bytes, decimals = 2) {

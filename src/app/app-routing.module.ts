@@ -7,6 +7,9 @@ const routes: Routes = [
     path: 'index', component: IndexComponent
   },
   {
+    path: 'index/:id', component: IndexComponent
+  },
+  {
     path: '**', redirectTo: '/index'
   }];
 
