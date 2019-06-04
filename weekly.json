@@ -3,16 +3,16 @@
         "beryllium_global": "POCOF1Global_9.5.30"
     },
     {
-        "cepheus": "CEPHEUS_9.5.16"
+        "cepheus": "CEPHEUS_9.5.30"
     },
     {
         "clover": "MIPAD4_9.5.30"
     },
     {
-        "dipper": "MI8_9.5.30"
+        "dipper": "MI8_9.5.17"
     },
     {
-        "dipper_global": "MI8Global_9.5.30"
+        "dipper_global": "MI8Global_9.5.17"
     },
     {
         "equuleus": "MI8UD_9.5.30"
@@ -21,25 +21,25 @@
         "equuleus_global": "MI8UDGlobal_9.5.30"
     },
     {
-        "lavender": "LAVENDER_9.5.23"
+        "lavender": "LAVENDER_9.5.30"
     },
     {
-        "nitrogen": "MIMAX3_9.5.23"
+        "nitrogen": "MIMAX3_9.5.30"
     },
     {
-        "nitrogen_global": "MIMAX3Global_9.5.23"
+        "nitrogen_global": "MIMAX3Global_9.5.30"
     },
     {
-        "perseus": "MIMIX3_9.5.30"
+        "perseus": "MIMIX3_9.5.17"
     },
     {
-        "perseus_global": "MIMIX3Global_9.5.30"
+        "perseus_global": "MIMIX3Global_9.5.17"
     },
     {
-        "platina": "MI8Lite_9.5.23"
+        "platina": "MI8Lite_9.5.30"
     },
     {
-        "platina_global": "MI8LiteGlobal_9.5.23"
+        "platina_global": "MI8LiteGlobal_9.5.30"
     },
     {
         "polaris": "MIMIX2S_9.5.30"
@@ -48,28 +48,28 @@
         "polaris_global": "MIMIX2SGlobal_9.5.17"
     },
     {
-        "sakura": "HM6Pro_9.5.23"
+        "sakura": "HM6Pro_9.5.30"
     },
     {
-        "sakura_india_global": "HM6ProINGlobal_9.5.23"
+        "sakura_india_global": "HM6ProINGlobal_9.5.30"
     },
     {
-        "sirius": "MI8SE_9.5.16"
+        "sirius": "MI8SE_9.5.30"
     },
     {
-        "ursa": "MI8Explorer_9.5.17"
+        "ursa": "MI8Explorer_9.5.31"
     },
     {
-        "violet": "VIOLET_9.5.23"
+        "violet": "VIOLET_9.5.30"
     },
     {
-        "wayne": "MI6X_9.5.23"
+        "wayne": "MI6X_9.5.30"
     },
     {
-        "whyred": "HMNote5_9.5.23"
+        "whyred": "HMNote5_9.5.30"
     },
     {
-        "whyred_global": "HMNote5Global_9.5.23"
+        "whyred_global": "HMNote5Global_9.5.30"
     },
     {
         "ysl": "HMS2_9.2.28"
