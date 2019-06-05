@@ -51,7 +51,7 @@
         "platina": "MI8Lite_V10.3.2.0.PDTCNXM"
     },
     {
-        "platina_global": "MI8LiteGlobal_V10.3.1.0.PDTMIXM"
+        "platina_global": "MI8LiteGlobal_V10.3.2.0.PDTMIXM"
     },
     {
         "polaris": "MIMIX2S_V10.3.2.0.PDGCNXM"
@@ -66,7 +66,7 @@
         "sakura": "HM6Pro_V10.3.1.0.PDICNXM"
     },
     {
-        "sakura_india_global": "undefined_undefined"
+        "sakura_india_global": "HM6ProINGlobal_V10.3.2.0.PDMMIXM"
     },
     {
         "sirius": "MI8SE_V10.3.1.0.PEBCNXM"
