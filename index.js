@@ -23,14 +23,14 @@ const UPDATER_LINK_WEEKLY = "https://raw.githubusercontent.com/XiaomiFirmwareUpd
 
 const stable_devices = ['beryllium_global', 'cepheus', 'cepheus_eea_global',
     'clover', 'dipper', 'dipper_global', 'davinci', 'davinci_global', 'raphael', 'equuleus', 'equuleus_global',
-    'lavender', 'lavender_in_global', 'nitrogen', 'nitrogen_global', 'grus', 'onc',
+    'lavender', 'lavender_in_global', 'nitrogen', 'nitrogen_global', 'grus', 'grus_global', 'onc',
     'perseus', 'perseus_global', 'platina', 'platina_global', 'polaris', 'polaris_global',
     'sakura', 'sakura_india_global', 'sirius', 'ursa',
     'violet', 'violet_in_global', 'wayne', 'whyred', 'whyred_global', 'ysl', 'ysl_global'];
 
 const weekly_devices = ['beryllium_global', 'cepheus', 'cepheus_eea_global',
     'clover', 'dipper', 'dipper_global', 'davinci', 'davinci_global', 'raphael', 'equuleus', 'equuleus_global',
-    'lavender', 'lavender_in_global', 'nitrogen', 'nitrogen_global', 'grus', 'onc',
+    'lavender', 'lavender_in_global', 'nitrogen', 'nitrogen_global', 'grus', 'grus_global', 'onc',
     'perseus', 'perseus_global', 'platina', 'platina_global', 'polaris', 'polaris_global',
     'sakura', 'sakura_india_global', 'sirius', 'ursa',
     'violet', 'violet_in_global', 'wayne', 'whyred', 'whyred_global', 'ysl', 'ysl_global'];
