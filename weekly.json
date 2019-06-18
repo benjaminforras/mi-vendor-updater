@@ -9,7 +9,7 @@
         "clover": "MIPAD4_9.6.13"
     },
     {
-        "dipper": "MI8_9.6.4"
+        "dipper": "MI8_9.6.13"
     },
     {
         "dipper_global": "MI8Global_9.6.13"
@@ -42,7 +42,7 @@
         "platina_global": "MI8LiteGlobal_9.6.13"
     },
     {
-        "polaris": "MIMIX2S_9.5.30"
+        "polaris": "MIMIX2S_9.6.13"
     },
     {
         "polaris_global": "MIMIX2SGlobal_9.5.17"
@@ -60,7 +60,7 @@
         "ursa": "MI8Explorer_9.6.13"
     },
     {
-        "violet": "VIOLET_9.5.30"
+        "violet": "VIOLET_9.6.13"
     },
     {
         "wayne": "MI6X_9.6.13"
