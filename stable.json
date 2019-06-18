@@ -33,7 +33,7 @@
         "equuleus_global": "MI8UDGlobal_V10.3.3.0.PECMIXM"
     },
     {
-        "grus": "GRUS_V10.3.1.0.PFBCNXM"
+        "grus": "GRUS_V10.3.3.0.PFBCNXM"
     },
     {
         "grus_global": "GRUSGlobal_V10.2.2.0.PFBMIXM"
@@ -84,7 +84,7 @@
         "ursa": "MI8Explorer_V10.2.1.0.PEHCNXM"
     },
     {
-        "violet": "VIOLET_V10.3.5.0.PFHCNXM"
+        "violet": "VIOLET_V10.3.6.0.PFHCNXM"
     },
     {
         "violet_in_global": "VIOLETINGlobal_V10.3.7.0.PFHINXM"
