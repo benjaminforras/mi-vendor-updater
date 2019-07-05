@@ -3,6 +3,9 @@
         "andromeda": "ANDROMEDA_V10.3.16.0.PEMCNXM"
     },
     {
+        "andromeda_global": "ANDROMEDAGlobal_V10.3.18.0.PEMMIXM"
+    },
+    {
         "beryllium_global": "POCOF1Global_V10.2.3.0.PEJMIXM"
     },
     {
@@ -15,7 +18,7 @@
         "clover": "MIPAD4_V10.2.1.0.ODJCNXM"
     },
     {
-        "davinci": "DAVINCI_V10.3.9.0.PFJCNXM"
+        "davinci": "DAVINCI_V10.3.8.0.PFJCNXM"
     },
     {
         "davinci_global": "DAVINCIGlobal_V10.3.6.0.PFJMIXM"
@@ -24,10 +27,10 @@
         "dipper": "MI8_V10.3.3.0.PEACNXM"
     },
     {
-        "dipper_global": "MI8Global_V10.3.3.0.PEAMIXM"
+        "dipper_global": "MI8Global_V10.3.2.0.PEAMIXM"
     },
     {
-        "equuleus": "MI8UD_V10.3.3.0.PECCNXM"
+        "equuleus": "MI8UD_V10.2.1.0.PECCNFK"
     },
     {
         "equuleus_global": "MI8UDGlobal_V10.3.3.0.PECMIXM"
@@ -42,7 +45,7 @@
         "lavender": "LAVENDER_V10.3.2.0.PFGCNXM"
     },
     {
-        "lavender_in_global": "LAVENDERINGlobal_V10.3.5.0.PFGINXM"
+        "lavender_in_global": "LAVENDERINGlobal_V10.2.11.0.PFGINXM"
     },
     {
         "nitrogen": "MIMAX3_V10.3.2.0.PEDCNXM"
@@ -81,7 +84,7 @@
         "sirius": "MI8SE_V10.3.1.0.PEBCNXM"
     },
     {
-        "ursa": "MI8Explorer_V10.3.4.0.PEHCNXM"
+        "ursa": "MI8Explorer_V10.2.1.0.PEHCNXM"
     },
     {
         "violet": "VIOLET_V10.3.5.0.PFHCNXM"
