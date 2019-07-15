@@ -18,7 +18,7 @@
         "cepheus_eea_global": "CEPHEUSEEAGlobal_V10.2.26.0.PFAEUXM"
     },
     {
-        "clover": "MIPAD4_V10.2.1.0.ODJCNXM"
+        "clover": "MIPAD4_V10.3.2.0.ODJCNXM"
     },
     {
         "davinci": "DAVINCI_V10.3.8.0.PFJCNXM"
@@ -30,7 +30,7 @@
         "dipper": "MI8_V10.3.3.0.PEACNXM"
     },
     {
-        "dipper_global": "MI8Global_V10.3.2.0.PEAMIXM"
+        "dipper_global": "MI8Global_V10.3.3.0.PEAMIXM"
     },
     {
         "equuleus": "MI8UD_V10.2.1.0.PECCNFK"
