@@ -24,7 +24,7 @@
         "davinci": "DAVINCI_V10.3.12.0.PFJCNXM"
     },
     {
-        "davinci_global": "DAVINCIGlobal_V10.3.6.0.PFJMIXM"
+        "davinci_global": "DAVINCIGlobal_V10.3.9.0.PFJMIXM"
     },
     {
         "dipper": "MI8_V10.3.4.0.PEACNXM"
@@ -57,7 +57,7 @@
         "nitrogen_global": "MIMAX3Global_V10.3.2.0.PEDMIXM"
     },
     {
-        "perseus": "MIMIX3_V10.3.1.0.PEECNXM"
+        "perseus": "MIMIX3_V10.3.2.0.PEECNXM"
     },
     {
         "perseus_global": "MIMIX3Global_V10.3.2.0.PEEMIXM"
