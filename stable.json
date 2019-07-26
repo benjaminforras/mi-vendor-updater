@@ -45,10 +45,10 @@
         "grus_global": "GRUSGlobal_V10.2.2.0.PFBMIXM"
     },
     {
-        "lavender": "LAVENDER_V10.3.2.0.PFGCNXM"
+        "lavender": "LAVENDER_V10.3.3.0.PFGCNXM"
     },
     {
-        "lavender_in_global": "LAVENDERINGlobal_V10.2.11.0.PFGINXM"
+        "lavender_in_global": "LAVENDERINGlobal_V10.3.6.0.PFGINXM"
     },
     {
         "nitrogen": "MIMAX3_V10.3.2.0.PEDCNXM"
@@ -69,10 +69,10 @@
         "platina_global": "MI8LiteGlobal_V10.3.2.0.PDTMIXM"
     },
     {
-        "polaris": "MIMIX2S_V10.3.2.0.PDGCNXM"
+        "polaris": "MIMIX2S_V10.3.3.0.PDGCNXM"
     },
     {
-        "polaris_global": "MIMIX2SGlobal_V10.3.3.0.PDGMIXM"
+        "polaris_global": "MIMIX2SGlobal_V10.3.4.0.PDGMIXM"
     },
     {
         "raphael": "RAPHAEL_V10.3.15.0.PFKCNXM"
@@ -81,7 +81,7 @@
         "sakura": "HM6Pro_V10.3.1.0.PDICNXM"
     },
     {
-        "sakura_india_global": "HM6ProINGlobal_V10.3.2.0.PDMMIXM"
+        "sakura_india_global": "HM6ProINGlobal_V10.3.3.0.PDMMIXM"
     },
     {
         "sirius": "MI8SE_V10.3.1.0.PEBCNXM"
