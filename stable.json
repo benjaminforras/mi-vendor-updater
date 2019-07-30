@@ -54,7 +54,7 @@
         "nitrogen": "MIMAX3_V10.3.2.0.PEDCNXM"
     },
     {
-        "nitrogen_global": "MIMAX3Global_V10.3.2.0.PEDMIXM"
+        "nitrogen_global": "MIMAX3Global_V10.3.3.0.PEDMIXM"
     },
     {
         "perseus": "MIMIX3_V10.3.2.0.PEECNXM"
@@ -66,7 +66,7 @@
         "platina": "MI8Lite_V10.3.3.0.PDTCNXM"
     },
     {
-        "platina_global": "MI8LiteGlobal_V10.3.2.0.PDTMIXM"
+        "platina_global": "MI8LiteGlobal_V10.3.3.0.PDTMIXM"
     },
     {
         "polaris": "MIMIX2S_V10.3.3.0.PDGCNXM"
@@ -75,7 +75,7 @@
         "polaris_global": "MIMIX2SGlobal_V10.3.4.0.PDGMIXM"
     },
     {
-        "raphael": "RAPHAEL_V10.3.15.0.PFKCNXM"
+        "raphael": "RAPHAEL_V10.3.16.0.PFKCNXM"
     },
     {
         "sakura": "HM6Pro_V10.3.1.0.PDICNXM"
