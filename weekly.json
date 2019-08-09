@@ -1,6 +1,6 @@
 [
     {
-        "cactus": "HM6A_9.8.1"
+        "cactus": "HM6A_9.8.8"
     },
     {
         "cepheus": "CEPHEUS_9.7.22"
@@ -15,13 +15,13 @@
         "equuleus": "MI8UD_9.8.1"
     },
     {
-        "grus": "GRUS_9.8.1"
+        "grus": "GRUS_9.8.8"
     },
     {
         "lavender": "LAVENDER_9.8.1"
     },
     {
-        "nitrogen": "MIMAX3_9.8.1"
+        "nitrogen": "MIMAX3_9.8.8"
     },
     {
         "perseus": "MIMIX3_9.8.1"
@@ -39,7 +39,7 @@
         "sirius": "MI8SE_9.8.1"
     },
     {
-        "ursa": "MI8Explorer_9.7.25"
+        "ursa": "MI8Explorer_9.8.8"
     },
     {
         "violet": "VIOLET_9.8.1"
@@ -48,7 +48,7 @@
         "wayne": "MI6X_9.8.1"
     },
     {
-        "whyred": "HMNote5_9.8.1"
+        "whyred": "HMNote5_9.8.8"
     },
     {
         "ysl": "HMS2_9.2.28"
