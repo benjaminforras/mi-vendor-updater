@@ -1,0 +1,29 @@
+name: Sync
+on: [schedule(0 */6 * * *)]
+
+jobs:
+  run:
+    name: Node 11
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set Node.js version
+        uses: actions/setup-node@v1.1.0
+        with:
+          version: 11
+      - run: node --version
+      - run: npm --version
+      - run: python3 --version
+      
+      - name: Install python dependecies
+        uses: jefftriplett/python-actions@master
+        run: cd xiaomi-flashable-firmware-creator.py 
+        run: pip3 install -r requirements.txt
+        run: cd ..
+        run: pip3 install telethon
+
+      - name: Install npm dependencies
+        run: npm install
+
+      - name: Run program
+        run: node index.js
