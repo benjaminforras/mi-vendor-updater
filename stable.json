@@ -27,7 +27,7 @@
         "davinci_global": "DAVINCIGlobal_V10.3.11.0.PFJMIXM"
     },
     {
-        "dipper": "MI8_V10.3.4.0.PEACNXM"
+        "dipper": "MI8_V10.3.5.0.PEACNXM"
     },
     {
         "dipper_global": "MI8Global_V10.3.4.0.PEAMIXM"
@@ -69,7 +69,7 @@
         "platina_global": "MI8LiteGlobal_V10.3.3.0.PDTMIXM"
     },
     {
-        "polaris": "MIMIX2S_V10.3.3.0.PDGCNXM"
+        "polaris": "MIMIX2S_V10.3.4.0.PDGCNXM"
     },
     {
         "polaris_global": "MIMIX2SGlobal_V10.3.5.0.PDGMIXM"
