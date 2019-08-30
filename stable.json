@@ -6,13 +6,13 @@
         "andromeda_global": "ANDROMEDAGlobal_V10.3.19.0.PEMMIXM"
     },
     {
-        "beryllium_global": "POCOF1Global_V10.3.6.0.PEJMIXM"
+        "beryllium_global": "POCOF1Global_V10.3.7.0.PEJMIXM"
     },
     {
-        "cactus": "HM6A_V10.3.4.0.OCBCNXM"
+        "cactus": "HM6A_V10.4.3.0.PCBCNXM"
     },
     {
-        "cepheus": "CEPHEUS_V10.2.31.0.PFACNXM"
+        "cepheus": "CEPHEUS_V10.2.33.0.PFACNXM"
     },
     {
         "cepheus_eea_global": "CEPHEUSEEAGlobal_V10.2.28.0.PFAEUXM"
@@ -33,7 +33,7 @@
         "dipper_global": "MI8Global_V10.3.4.0.PEAMIXM"
     },
     {
-        "equuleus": "MI8UD_V10.3.4.0.PECCNXM"
+        "equuleus": "MI8UD_V10.3.5.0.PECCNXM"
     },
     {
         "equuleus_global": "MI8UDGlobal_V10.3.5.0.PECMIXM"
@@ -45,7 +45,7 @@
         "grus_global": "GRUSGlobal_V10.3.3.0.PFBMIXM"
     },
     {
-        "lavender": "LAVENDER_V10.3.3.0.PFGCNXM"
+        "lavender": "LAVENDER_V10.3.4.0.PFGCNXM"
     },
     {
         "lavender_in_global": "LAVENDERINGlobal_V10.3.7.0.PFGINXM"
@@ -57,7 +57,7 @@
         "nitrogen_global": "MIMAX3Global_V10.3.3.0.PEDMIXM"
     },
     {
-        "perseus": "MIMIX3_V10.3.2.0.PEECNXM"
+        "perseus": "MIMIX3_V10.3.3.0.PEECNXM"
     },
     {
         "perseus_global": "MIMIX3Global_V10.3.2.0.PEEMIXM"
@@ -96,10 +96,10 @@
         "violet_in_global": "VIOLETINGlobal_V10.3.13.0.PFHINXM"
     },
     {
-        "wayne": "MI6X_V10.3.5.0.PDCCNXM"
+        "wayne": "MI6X_V10.3.6.0.PDCCNXM"
     },
     {
-        "whyred": "HMNote5_V10.3.4.0.PEICNXM"
+        "whyred": "HMNote5_V10.3.5.0.PEICNXM"
     },
     {
         "whyred_global": "HMNote5Global_V10.3.2.0.PEIMIXM"
