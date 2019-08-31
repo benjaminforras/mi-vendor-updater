@@ -25,14 +25,14 @@ const stable_devices = ['andromeda', 'andromeda_global', 'beryllium_global', 'ca
     'clover', 'dipper', 'dipper_global', 'raphaelin', 'davinci', 'davinci_global', 'raphael', 'equuleus', 'equuleus_global',
     'lavender', 'lavender_in_global', 'nitrogen', 'nitrogen_global', 'grus', 'grus_global', 'onc',
     'perseus', 'perseus_global', 'platina', 'platina_global', 'polaris', 'polaris_global',
-    'sakura', 'sakura_india_global', 'sirius', 'ursa',
+    'sakura', 'sakura_india_global', 'sirius', 'ursa', 'tulip_global',
     'violet', 'violet_in_global', 'wayne', 'whyred', 'whyred_global', 'ysl', 'ysl_global', 'pine_global', 'pine_in_global'];
 
 const weekly_devices = ['andromeda', 'andromeda_global', 'beryllium_global', 'cactus', 'cepheus', 'cepheus_eea_global',
     'clover', 'dipper', 'dipper_global', 'raphaelin', 'davinci', 'davinci_global', 'raphael', 'equuleus', 'equuleus_global',
     'lavender', 'lavender_in_global', 'nitrogen', 'nitrogen_global', 'grus', 'grus_global', 'onc',
     'perseus', 'perseus_global', 'platina', 'platina_global', 'polaris', 'polaris_global',
-    'sakura', 'sakura_india_global', 'sirius', 'ursa',
+    'sakura', 'sakura_india_global', 'sirius', 'ursa', 'tulip_global',
     'violet', 'violet_in_global', 'wayne', 'whyred', 'whyred_global', 'ysl', 'ysl_global', 'pine_global', 'pine_in_global'];
 
 const versions = ['stable', 'weekly'];
