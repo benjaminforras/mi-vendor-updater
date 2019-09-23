@@ -31,26 +31,8 @@ async function main() {
             if (parseFloat(device.android) >= 9.0) {
                 console.log("");
                 console.log("==================");
-                console.log(`${device.device} - ${device.codename}`);
-                await updateFiles(device, `${device.codename}-weekly`);
-            }
-        }
-    });
-
-    console.log("Fetching Stable recoveries");
-    await fetch(STABLE_RECOVERY).then(function(response) {
-        return response.text();
-    }).then(async function(response) {
-        const devices = yaml.safeLoad(response);
-        for(let device of devices) {
-            if (ignoredDevices.includes(device.codename)) {
-                continue;
-            }
-            if (parseFloat(device.android) >= 9.0) {
-                console.log("");
-                console.log("==================");
                 console.log(`Weekly - ${device.device} - ${device.codename}`);
-                await updateFiles(device, `${device.codename}-stable`);
+                await updateFiles(device, `${device.codename}-weekly`);
             }
         }
     });
