@@ -1,0 +1,25 @@
+{
+  "name": "mi-vendor-updater",
+  "version": "1.0.0",
+  "description": "🤖 A tool to automatically generate firmware+vendor files. ⚒️ Based on @XiaomiFirmwareUpdater, rewritten in nodejs. ⚒️ ℹ️ Not a part of the @XiaomiFirmwareUpdater project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/xiaomi-vendor-updater-project/mi-vendor-updater.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/xiaomi-vendor-updater-project/mi-vendor-updater/issues"
+  },
+  "homepage": "https://gitlab.com/xiaomi-vendor-updater-project/mi-vendor-updater#readme",
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "node-fetch": "^2.6.0",
+    "rimraf": "^3.0.0",
+    "sync-foreach": "^1.0.2"
+  }
+}
